@@ -1,16 +1,51 @@
-# React + Vite
+# Task Manager App with Supabase (CRUD Operations)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple **Task Manager App** built using **React** and **Supabase**.  
+It demonstrates **CRUD operations** (Create, Read, Update, Delete) using Supabase as a **BaaS (Backend as a Service)**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- Add a new task (title and description)  
+- Edit task description  
+- Delete a task  
+- View all tasks in a table  
+- Live updates without page reload  
 
-## React Compiler
+This project helps you get familiar with:
+- Supabase client integration in React  
+- Handling state with React hooks (`useState`, `useEffect`)  
+- Performing CRUD operations with Supabase  
+- Using environment variables safely  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Prerequisites
+- Node.js installed (v16+)  
+- npm or yarn installed  
+- A Supabase project with a table named `task_manager`  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Your `task_manager` table should have the following columns:
+- `id` (integer, primary key, auto-increment)  
+- `title` (text)  
+- `description` (text)  
+
+---
+
+## Setup Instructions
+
+1. **Clone the repository**
+```bash
+git clone <your-repo-url>
+cd <your-repo-folder>
+
+npm install
+# or
+yarn install
+
+VITE_SUPABASE_URL=your-supabase-url
+VITE_SUPABASE_ANON_KEY=your-anon-key
+
+npm run dev
+# or
+yarn dev
